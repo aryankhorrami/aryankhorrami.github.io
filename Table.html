@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="skyline-style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    }
+  });
+});
+    </script>
+    <title>Skyline</title>
+</head>
+<body>
+        <div class="navbar">
+            <img class="logo" src="NISSAN_SKYLINE_logo.svg.png" alt="NISSAN_SKYLINE_logo">
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="Items.html">Listings</a></li>
+                <li><a href="Table.html">Items</a></li>
+                <li><a href="About.html">About us</a></li>
+            </ul>
+        </div>
+    <div class="tablediv" id="table">
+        <table class="table">
+            <tr class="th">
+                <td>Item</td>
+                <td>availability</td>
+                <td>Price</td>
+                <td>location</td>
+            </tr>
+            <tr>
+                <td>Hogwarts</td>
+                <td>Available</td>
+                <td>Magical Goods</td>
+                <td>Take the train</td>
+            </tr>
+            <tr>
+                <td>Steve's garage</td>
+                <td>Sold</td>
+                <td>Not a lot 20yrs Ago</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+                <td>Charlie's Chocolate Factory</td>
+                <td>Call Roald Dahl</td>
+                <td>A golden Ticket</td>
+                <td>In a book</td>
+            </tr>
+            <tr>
+                <td>Pyramids of giza</td>
+                <td>Owner is dead so you're good</td>
+                <td>Owner is dead so I can't Ask</td>
+                <td>Egypt</td>
+            </tr>
+            <tr>
+                <td>Your House</td>
+                <td>You already own it</td>
+                <td>Gotta Convince Yourself</td>
+                <td>Your house</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

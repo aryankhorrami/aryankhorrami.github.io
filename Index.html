@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="skyline-style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    }
+  });
+});
+    </script>
+    <title>Skyline</title>
+</head>
+<body>
+    <div class="banner">
+                <div class="navbar2" id="navbar2">
+            <img class="logo" src="NISSAN_SKYLINE_logo.svg.png" alt="NISSAN_SKYLINE_logo">
+            <ul>
+                <li><a href="#navbar2">Home</a></li>
+                <li><a href="#main">Listings</a></li>
+                <li><a href="#table">Items</a></li>
+                <li><a href="#about">About us</a></li>
+            </ul>
+        </div>
+        <div class="navbar">
+            <img class="logo" src="NISSAN_SKYLINE_logo.svg.png" alt="NISSAN_SKYLINE_logo">
+            <ul>
+                <li><a href="#navbar2">Home</a></li>
+                <li><a href="#main">Listings</a></li>
+                <li><a href="#table">Items</a></li>
+                <li><a href="#about">About us</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="content" id="content">
+        <h1>BUY YOUR DREAM HOUSE</h1>
+        <p>if you can afford it.</p>
+    </div>
+</body>
+</html>
